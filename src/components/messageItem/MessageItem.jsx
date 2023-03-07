@@ -1,7 +1,16 @@
+import { useState } from "react";
 import "./index.css";
 
 const MessageItem = ({ messageData }) => {
   const { photo, userName, body, email } = messageData;
+
+  const [showLike, setShowLike] = useState(false);
+
+  const mustLike = () => {
+    setShowLike(!showLike);
+
+    console.log(showMenu);
+  };
 
   return (
     <div className="MessageItem">
@@ -24,7 +33,7 @@ const MessageItem = ({ messageData }) => {
           <img
             src="https://img.icons8.com/ios-glyphs/256/hearts.png"
             alt="heart"
-          />
+            onclick ={mustLike}/>
           <span className="value_span">12</span>
           <img src="https://img.icons8.com/ios/256/upload.png" alt="upload" 
           />
