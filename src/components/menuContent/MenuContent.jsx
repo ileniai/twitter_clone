@@ -1,3 +1,7 @@
+import { HiHashtag } from "react-icons/hi"
+import { BiBell } from "react-icons/bi"
+import { BsEnvelope } from "react-icons/bs"
+import { MdOutlineBookmarkBorder } from "react-icons/md"
 import "./index.css";
 
 const MenuContent = () => {
@@ -18,31 +22,19 @@ const MenuContent = () => {
         <p className="property__menu">Home</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material-rounded/256/hashtag-large.png"
-          alt="explore"
-        />
+        <HiHashtag className="simbols_menu"/>
         <p className="property__menu">Explore</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material-outlined/512/filled-appointment-reminders.png"
-          alt="notifications"
-        />
+        <BiBell className="simbols_menu"/>
         <p className="property__menu">Notifications</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/windows/512/secured-letter--v1.png"
-          alt="messages"
-        />
+        <BsEnvelope className="simbols_menu"/>
         <p className="property__menu">Messages</p>
       </li>
       <li>
-        <img
-          src="https://img.icons8.com/material/256/bookmark-outline.png"
-          alt="bookmarks"
-        />
+        <MdOutlineBookmarkBorder className="simbols_menu"/>
         <p className="property__menu">Bookmarks</p>
       </li>
     </ul>

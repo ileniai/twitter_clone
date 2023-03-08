@@ -1,23 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./index.css";
 
 const MessageItem = ({ messageData }) => {
-  const { photo, userName, body, email } = messageData;
+  const { userId, body } = messageData;
 
-  const [showLike, setShowLike] = useState(false);
+  const [userData, setUserData] = useState({});
 
-  const mustLike = () => {
-    setShowLike(!showLike);
+  useEffect(() => {
+    fetch(`https://dummyjson.com/users/${userId}`)
+      .then((res) => res.json())
+      .then((data) => setUserData(data));
+  }, []);
 
-    console.log(showMenu);
-  };
 
   return (
     <div className="MessageItem">
-      <img className="MessageItem__photo" src={photo} alt={userName} />
+      <img className="MessageItem__photo" 
+      src={userData.image} alt={userData.username} />
       <div className="MessageItem__content">
-        <span>{userName}</span>
-        <span> {email}</span>
+        <span>{userData.username}</span>
+        <span> {userData.email}</span>
         <p>{body}</p>
         <div className="MessageItem__content--icons">
           <img
@@ -33,7 +35,7 @@ const MessageItem = ({ messageData }) => {
           <img
             src="https://img.icons8.com/ios-glyphs/256/hearts.png"
             alt="heart"
-            onclick ={mustLike}/>
+          />
           <span className="value_span">12</span>
           <img src="https://img.icons8.com/ios/256/upload.png" alt="upload" 
           />

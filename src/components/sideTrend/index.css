@@ -1,0 +1,23 @@
+.SideTrend {
+    border-left: 1px solid lightgrey;
+    width: 30%;
+    padding:10px 0 0 10;
+    display: none;
+  }
+
+  .SideTrend_search {
+    padding: 0 0 0 10px;
+    width: 90%;
+    height: 30px;
+    border: 0;
+    background-color: #eaeff1;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  /* ATTENZIONE AL MOBILE FIRST */
+  @media screen and (min-width: 800px) {
+    .SideTrend {
+      display: block;
+    }
+  }

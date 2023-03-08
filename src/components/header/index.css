@@ -1,6 +1,7 @@
 .Header {
     display: flex;
     flex-direction: column;
+    
   }
   
   .Header img {
@@ -14,9 +15,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 12px;
+   
     margin-bottom: 20px;
     font-size: 30px;
+    padding: 0px 12px 12px;
+    border-bottom: 1px solid lightgrey;
+
   }
 
   .line_header1 {
@@ -27,7 +31,9 @@
   }
 
   .line_header2{
-    border:2px solid red;
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: 0.4s;
     color: #03aaf4;
   }
   
@@ -37,8 +43,58 @@
     transition: 0.4s;
   }
 
+  .title{
+    font-size: 1.7rem;
+    color: black;
+    padding-left: 12px;
+  }
+
+
+  .Header__graph{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    padding: 12px 12px;
+    border-bottom: 1px solid lightgrey;
+    color: #03aaf4;
+    
+  }
+
+  .Header__graph input {
+   
+    padding: 0 0 0 10px;
+    width: 80%;
+    height: 28px;
+    border: 0;
+    background-color: #eaeff1;
+    border-radius: 24px;
+    outline: none;
+  }
+  
+  .Header__graph .profile {
+    width: 35px !important;
+    height: 35px !important;
+    border: 1px solid;
+    border-radius: 100%;
+  }
+
   @media screen and (min-width: 800px) {
     .Header__image {
       display: none;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    .Header__graph {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .title {
+      display: none;
+    }
+  }
+
+  

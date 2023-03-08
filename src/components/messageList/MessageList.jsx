@@ -1,13 +1,22 @@
-import Footer from "../../components/footer"
-import messageList from "../../mocks/messageList";
+import {useState, useEffect} from "react";
+import Footer from "../footer"
 import MessageItem from "../messageItem";
 import "./index.css";
 
 const MessageList = () => {
+
+  const [messageList, setMessageList] = useState([]);
+
+  useEffect(()=>{
+    fetch("https://dummyjson.com/posts")
+    .then ((res)=> res.json())
+    .then(({posts})=> setMessageList(posts));
+  }, []);
+
   return (
     <div className="MessageList">
       {messageList.map((message) => (
-        <MessageItem messageData={message} />
+        <MessageItem messageData={message} key={message.id} />
       ))}
       <Footer />
     </div>
