@@ -12,7 +12,7 @@ const TrendList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="TrenList">
       {trendList.map((item) => (
         <TrendItem data={item} key={item.id} />
       ))}

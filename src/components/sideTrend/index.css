@@ -1,8 +1,11 @@
 .SideTrend {
+    border:2px solid red;
     border-left: 1px solid lightgrey;
-    width: 30%;
+    width: 28%;
     padding:10px 0 0 10;
     display: none;
+    overflow: scroll;
+    height: 100vh;
   }
 
   .SideTrend_search {

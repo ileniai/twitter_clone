@@ -7,6 +7,10 @@
     cursor: pointer;
 }
 
+.icons_home{
+  color: rgba(255, 255, 255, 0.854);
+
+}
 
 .icons_home:hover{
     background-color: #01b5f15b;

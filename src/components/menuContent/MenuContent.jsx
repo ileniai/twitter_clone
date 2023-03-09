@@ -9,13 +9,13 @@ const MenuContent = () => {
     <div className="MenuContent">
       <ul>
       <li>
-        <img
+        <img className="simbols_menu"
           src="https://img.icons8.com/color/256/twitter--v1.png"
           alt="twitter logo"
         />
       </li>
       <li>
-        <img
+        <img className="simbols_menu"
           src="https://img.icons8.com/pulsar-line/256/home-page.png"
           alt="home"
         />

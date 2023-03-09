@@ -5,8 +5,8 @@
   }
   
   .MessageItem img {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
   
   .MessageItem__photo {
@@ -17,6 +17,11 @@
   .MessageItem__content {
     font-size: 0.9rem;
     padding: 0 12px;
+    
+  }
+
+  .text_card{
+    width: 100%;
   }
   
   .MessageItem__content span:nth-child(1) {
@@ -29,6 +34,7 @@
   }
   
   .MessageItem__content--icons {
+    
     gap: 50px;
     display: flex;
     justify-content: space-between;
