@@ -17,11 +17,13 @@
   .MessageItem__content {
     font-size: 0.9rem;
     padding: 0 12px;
-    
+    width: 80%;
   }
 
   .text_card{
+    
     width: 100%;
+    
   }
   
   .MessageItem__content span:nth-child(1) {
@@ -35,12 +37,16 @@
   
   .MessageItem__content--icons {
     
-    gap: 50px;
+    background-color: white;
+    gap: 30px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
+    border-radius: 2px;
   }
   
   .MessageItem__content--icons img {
+    background-color: white;
     width: 20px;
     height: 20px;
     cursor: pointer;

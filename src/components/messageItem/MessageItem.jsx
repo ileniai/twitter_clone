@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import "./index.css";
 
-const MessageItem = ({ messageData }) => {
+const MessageItem = ({ messageData, setVisibleModal }) => {
   const { userId, body } = messageData;
-
   const [userData, setUserData] = useState({});
+
+
 //Ho creato uno stato che incrementa il valore dei like
   const [isALike, setIsALike] = useState(0);
 //Ho creato uno stato che incrementa il valore dei messaggi
@@ -16,10 +17,15 @@ const MessageItem = ({ messageData }) => {
       .then((res) => res.json())
       .then((data) => setUserData(data));
   }, []);
+
+
 //Ho creato la funzione che incrementa il valore dei like
   const mustLike = ()=>setIsALike((prev)=> prev + 1);
 //Ho creato la funzione che incrementa il valore dei messaggi
   const mustMessage = ()=>setIsAMessage((prev)=> prev + 1);
+
+
+  const OnhandleClick = () =>{ setVisibleModal(true); };
 
   return (
     <div className="MessageItem">
@@ -33,9 +39,11 @@ const MessageItem = ({ messageData }) => {
           <img onClick={mustMessage}
             src="https://img.icons8.com/external-those-icons-lineal-those-icons/256/external-Chat-Bubble-messages-and-chat-those-icons-lineal-those-icons-10.png"
             alt="chat"
-          />
+          />      
           <span className="value_span">{isAMessage}</span>
-          <img
+          
+          <img onClick={OnhandleClick}
+          //cliccando su questa immagine si aprirà una modale con form
             src="https://img.icons8.com/material-rounded/512/retweet.png"
             alt="retweet"
           />

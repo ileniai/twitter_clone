@@ -1,3 +1,4 @@
+import { AiOutlineHome } from "react-icons/ai"
 import { HiHashtag } from "react-icons/hi"
 import { BiBell } from "react-icons/bi"
 import { BsEnvelope } from "react-icons/bs"
@@ -15,10 +16,7 @@ const MenuContent = () => {
         />
       </li>
       <li>
-        <img className="simbols_menu"
-          src="https://img.icons8.com/pulsar-line/256/home-page.png"
-          alt="home"
-        />
+        <AiOutlineHome className="simbols_menu" />
         <p className="property__menu">Home</p>
       </li>
       <li>
